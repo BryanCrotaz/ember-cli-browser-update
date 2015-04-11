@@ -8,7 +8,7 @@ It warns the user with a small header bar that their browser is out of date and 
 You can provide the warning message and choose your minimum browser specs amongst other things. 
 
 By default the minimum recommended browser is:
-IE >9
-Firefox >15
-Opera >12.1
-Safari > 5.1
++ IE >9
++ Firefox >15
++ Opera >12.1
++ Safari > 5.1
