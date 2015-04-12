@@ -16,6 +16,13 @@ By default the minimum recommended browser is:
 + Opera >12.1
 + Safari > 5.1
 
+## Content Security Policy
+
+If you are using [CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/) you must add browserupdate.org as a script source:
+```
+Content-Security-Policy: script-src 'self' browserupdate.org
+```
+
 ## Installation
 
 * `git clone` this repository
