@@ -1,6 +1,9 @@
-export function initialize(/* container, application */) {
-  // application.inject('route', 'foo', 'service:foo');
-  console.log('initialized');
+export function initialize(container, application) {
+  application.ready = function() {
+  	this._super();
+  	var service = application.registry.lookup('service:browser-update');
+  	service.inject();
+  };
 }
 
 export default {
