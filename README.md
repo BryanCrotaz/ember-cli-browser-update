@@ -44,6 +44,8 @@ var ENV = {
 
 This config object is passed to browser-update as its `buoop` variable. Full documentation can be found at [Browser-Update](http://browser-update.org/customize.html).
 
+The `test: true` parameter always shows the header bar regardless of the browser - useful for testing.
+
 Default values set up in the service are:
 ```
 browserUpdate: {
