@@ -29,7 +29,7 @@ export default Ember.Service.extend(Ember.Evented, {
     }, delay);
   },
 
-  _config: function () {
+  _config: Ember.computed(function () {
     var config = this.get('config');
     // send config to browser-update script as global variable
     config.vs = config.vs || {i: 9, f: 2, o: 9.63, s: 2, c: 10};
@@ -37,5 +37,5 @@ export default Ember.Service.extend(Ember.Evented, {
     config.onclick = this.click.bind(this);
     config.onclose = this.close.bind(this);
     return config;
-  }.property()
+  })
 });
