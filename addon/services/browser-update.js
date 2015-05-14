@@ -24,7 +24,7 @@ export default Ember.Service.extend(Ember.Evented, {
     delay = delay || 100;
     Ember.run.later(this, function () {
       // inject the browser update script
-      var url = "//browser-update.org/update.js";
+      var url = "https://browser-update.org/update.js";
       injectScript(url);
     }, delay);
   },
