@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-browser-update",
-  "version": "0.1.3",
+  "version": "1.13.7",
   "description": "An ember-cli addon to work with browserupdate.org and warn users with out of date browsers.",
   "directories": {
     "doc": "doc",
