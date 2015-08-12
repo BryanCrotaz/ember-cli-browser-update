@@ -1,9 +1,6 @@
-import {
-  moduleFor,
-  test
-} from 'ember-qunit';
+import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:browser-update', {
+moduleFor('service:browser-update', 'Unit | Service | browser update', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });

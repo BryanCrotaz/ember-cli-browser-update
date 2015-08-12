@@ -1,14 +1,14 @@
 import Ember from 'ember';
-import initializer from '../../../initializers/browser-update';
+import { initialize } from '../../../initializers/browser-update';
 import { module, test } from 'qunit';
 
-var container, application;
+var registry, application;
 
-module('BrowserUpdateInitializer', {
+module('Unit | Initializer | browser update', {
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();
-      container = application.__container__;
+      registry = application.registry;
       application.deferReadiness();
     });
   }
@@ -16,7 +16,7 @@ module('BrowserUpdateInitializer', {
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  initializer.initialize(container, application);
+  initialize(registry, application);
 
   // you would normally confirm the results of the initializer here
   assert.ok(true);
