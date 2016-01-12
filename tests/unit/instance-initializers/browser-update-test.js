@@ -1,22 +1,23 @@
 import Ember from 'ember';
-import { initialize } from '../../../initializers/browser-update';
+import { initialize } from '../../../instance-initializers/browser-update';
 import { module, test } from 'qunit';
 
-var registry, application;
+var application, appInstance;
 
 module('Unit | Initializer | browser update', {
+  needs: ['service:browser-update'],
+
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();
-      registry = application.registry;
-      application.deferReadiness();
+      appInstance = application.buildInstance();
     });
   }
 });
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  initialize(registry, application);
+  initialize(appInstance);
 
   // you would normally confirm the results of the initializer here
   assert.ok(true);
