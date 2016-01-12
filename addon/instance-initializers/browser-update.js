@@ -7,4 +7,4 @@ export function initialize(appInstance) {
 export default {
   name: 'browser-update',
   initialize
-}
+};
