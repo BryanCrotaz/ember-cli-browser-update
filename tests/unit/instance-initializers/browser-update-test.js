@@ -1,15 +1,15 @@
 import Ember from 'ember';
 import { initialize } from '../../../instance-initializers/browser-update';
+import browserUpdate from '../../../services/browser-update';
 import { module, test } from 'qunit';
 
 var application, appInstance;
 
 module('Unit | Initializer | browser update', {
-  needs: ['service:browser-update'],
-
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();
+      application.register('service:browser-update', browserUpdate);
       appInstance = application.buildInstance();
     });
   }
