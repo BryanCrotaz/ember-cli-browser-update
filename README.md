@@ -37,7 +37,8 @@ Add a `browserUpdate` object to your environment:
 var ENV = {
     browserUpdate: {
       vs: {i:9,f:2,o:9.63,s:2,c:10},
-      test: true
+      test: true,
+      minify: true
     },
     ... // rest of environment
 ```
@@ -45,6 +46,8 @@ var ENV = {
 This config object is passed to browser-update as its `buoop` variable. Full documentation can be found at [Browser-Update](http://browser-update.org/customize.html).
 
 The `test: true` parameter always shows the header bar regardless of the browser - useful for testing.
+
+The `minify: true` parameter determines if the addon should retrieve browser-update scripts minified.
 
 Default values set up in the service are:
 ```

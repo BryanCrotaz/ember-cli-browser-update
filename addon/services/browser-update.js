@@ -23,8 +23,10 @@ export default Ember.Service.extend(Ember.Evented, {
   _injectAfterDelay: function (delay) {
     delay = delay || 100;
     Ember.run.later(this, function () {
+      var config = this.get('config');
+      var extension = config.minify ? '.min.js' : '.js';
       // inject the browser update script
-      var url = "https://browser-update.org/update.js";
+      var url = 'https://browser-update.org/update' + extension;
       injectScript(url);
     }, delay);
   },
